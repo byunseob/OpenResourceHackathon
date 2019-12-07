@@ -1,0 +1,33 @@
+openapi: 3.0.0
+
+info:
+  title: locust-helper
+  version: 0.0.1
+
+servers:
+  - url: https://endpoint.ainize.ai/minsulee2/primality-test/
+
+paths:
+  /locust:
+    post:
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "order placed for purchasing the pet"
+          required: true
+          schema:
+            $ref: "#/definitions/Order"
+          allowReserved: true
+      responses:
+        '200':
+          content:
+            applicatioin/json:
+              schema:
+                type: string
+                properties:
+                  result:
+                    type: string
+        '400':
+          description: Bad Request Error
+        default:
+          description: Unexpected Error

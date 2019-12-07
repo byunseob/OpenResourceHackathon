@@ -18,6 +18,7 @@ def home():
     host = request_param('host', required=True)
     return render_template('index.html', host=host)
 
+
 # @locust_bp.route('', methods=['GET'])
 # @cross_origin()
 # def index():
