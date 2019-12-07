@@ -1,3 +1,5 @@
+[![Run on Ainize](https://ainize.ai/static/images/run_on_ainize_button.svg)](http://34.67.222.84/locust/form)
+
 ##locust helper
 
 ## Docker build
