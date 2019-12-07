@@ -1,1 +1,2 @@
-locust -f /svc/42locustfile.py &
+nginx -g daemon off;
+uwsgi --ini /svc/uwsgi.ini

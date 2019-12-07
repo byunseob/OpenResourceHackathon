@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flask Index</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link rel="stylesheet" href="../static/css/my.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col s4">
+            <select class="browser-default mt-1">
+                <option value="GET" selected>GET</option>
+                <option value="POST">POST</option>
+                <option value="PUT">PUT</option>
+                <option value="DELETE">DELETE</option>
+            </select>
+        </div>
+        <div class="col s8">
+                <div class="input-field dark">
+                    <input id="url" type="text" class="validate">
+                    <label for="url">Enter your request url</label>
+                </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs dark">
+                <li class="tab col s3"><a class="active" href="#params">Params</a></li>
+                <li class="tab col s3"><a href="#headers">Headers</a></li>
+                <li class="tab col s3"><a href="#test3">Disabled Tab</a></li>
+                <li class="tab col s3"><a href="#test4">Test 4</a></li>
+            </ul>
+        </div>
+        <div id="params" class="col s12">
+
+        </div>
+        <div id="headers" class="col s12">
+
+        </div>
+        <div id="test3" class="col s12">Test 3</div>
+        <div id="test4" class="col s12">Test 4</div>
+    </div>
+</div>
+
+<script src="../static/js/my.js"></script>
+</body>
+
+</html>
