@@ -1,5 +1,6 @@
 import subprocess
 import os
+import re
 import logging
 from flask import Blueprint, redirect, render_template
 from flask_cors import cross_origin
@@ -17,13 +18,11 @@ def home():
     host = request_param('host', required=True)
     return render_template('index.html', host=host)
 
-
-@locust_bp.route('', methods=['GET'])
-@cross_origin()
-def index():
-    host = request_param('host', required=True)
-    return redirect(f"http://{host}:8089")
-
+# @locust_bp.route('', methods=['GET'])
+# @cross_origin()
+# def index():
+#     host = request_param('host', required=True)
+#     return redirect(f"http://{host}:8089")
 
 @locust_bp.route('', methods=['POST'])
 @cross_origin()
@@ -66,7 +65,7 @@ def delete():
 
 
 def get_pids(port):
-    command = "sudo lsof -i :%s | awk '{print $2}'" % port
+    command = "lsof -i :%s | awk '{print $2}'" % port
     pids = subprocess.check_output(command, shell=True)
     pids = pids.strip()
     if pids:

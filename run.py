@@ -11,11 +11,6 @@ app = create_app()
 #     response.headers.set('Content-Type', 'application/json;charset=utf-8')
 #     return response
 
-@app.route('/', methods=['GET'])
-def index():
-    return redirect(f"http://127.0.0.1:8089")
-
-
 @app.route('/hello', methods=['GET'])
 def health():
     name = request_param("name")
